@@ -1,0 +1,90 @@
+$primary: #181818;
+$secondary: #f2f2f2;
+$white: #181818;
+$gray: #9b9b9b;
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: $white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  //   position: absolute;
+  //   top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: $gray;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    //  position: absolute;
+    //  top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $primary;
+    font-weight: 700;
+  }
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $primary, $secondary);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field {
+  &:required,
+  &:invalid {
+    box-shadow: none;
+  }
+}
+
+.form__label_ {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+input {
+  width: 330px; /* When specifying this, you can use both px and % */
+  height: 36px;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  border: 1px solid #e4e4e4;
+  border-radius: 3px;
+  margin-bottom: 16px;
+  color: #181818;
+}
+
+// input[type=text] {
+//   width: 80%;
+//   padding: 15px 22px;
+//   margin: 10px 5px;
+//   box-sizing: border-box;
+// }
